@@ -9,7 +9,7 @@ export default defineConfig({
             "/api/items": {
                 // target: import.meta.env.VITE_BACKEND_SERVER,
                 // target: "https://shoppinglist-api-8wio.onrender.com/",
-                target: "http://localhost:5001",
+                target: "https://mernshoppinglist-production.up.railway.app/",
                 changeOrigin: true,
             },
         },
