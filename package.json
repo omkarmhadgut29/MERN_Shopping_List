@@ -17,7 +17,7 @@
         "build-client": "npm install --prefix client && npm run build --prefix client",
         "buiild-server": "npm install",
         "netlify-build": "netlify deploy --prod",
-        "build": "npm run netlify-build && npm run netlify-postbuild"
+        "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
     "author": "Omkar Mhadgut",
     "license": "ISC",
