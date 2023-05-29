@@ -1,0 +1,35 @@
+{
+    "name": "shopping-list",
+    "version": "1.0.0",
+    "description": "MERN stack shopping list app",
+    "type": "module",
+    "main": "server.js",
+    "engines": {
+        "node": "^14.17.0"
+    },
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "start": "nodemon server.js",
+        "server": "nodemon server.js",
+        "client": "npm run dev --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+        "build-client": "npm install --prefix client && npm run build --prefix client",
+        "buiild-server": "npm install",
+        "netlify-build": "netlify deploy --prod",
+        "build": "npm run netlify-build && npm run netlify-postbuild"
+    },
+    "author": "Omkar Mhadgut",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "concurrently": "^8.0.1",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-async-handler": "^1.2.0",
+        "mongoose": "^7.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
