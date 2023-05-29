@@ -9,7 +9,7 @@
     },
     "scripts": {
         "client-install": "npm install --prefix client",
-        "start": "nodemon server.js",
+        "start": "concurrently \"npm run server\" \"npm run client\"",
         "server": "nodemon server.js",
         "client": "npm run dev --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
